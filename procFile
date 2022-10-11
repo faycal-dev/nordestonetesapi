@@ -1,1 +1,1 @@
-web gunicorn nordestoneApi.wsgi:apllication --log-file -
+web gunicorn nordestoneApi.wsgi:application --log-file -
