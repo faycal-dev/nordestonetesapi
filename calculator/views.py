@@ -11,13 +11,13 @@ class Calculate(APIView):
             SecondValue = request.data["SecondValue"]
 
             if (operation == "addition"):
-                data = firstValue + SecondValue
+                data = int(firstValue) + int(SecondValue)
                 return Response(data=data, status=status.HTTP_200_OK)
             if (operation == "subtraction"):
-                data = firstValue - SecondValue
+                data = int(firstValue) - int(SecondValue)
                 return Response(data=data, status=status.HTTP_200_OK)
             if (operation == "multiplication"):
-                data = firstValue * SecondValue
+                data = int(firstValue) * int(SecondValue)
                 return Response(data=data, status=status.HTTP_200_OK)
 
             return Response({"message": "Bad request"},status=status.HTTP_400_BAD_REQUEST)
