@@ -1,2 +1,2 @@
-web gunicorn nordestoneApi.wsgi:application --log-file -
+web: gunicorn nordestoneApi.wsgi:application --log-file -
 heroku ps:scale web=1
